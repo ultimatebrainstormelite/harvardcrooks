@@ -1,0 +1,6 @@
+/*!CK:1991947215!*//*1439790745,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["XymPe"]); }
+
+__d("XLtgPostTranslationController",["XController"],function a(b,c,d,e,f,g){c.__markCompiled&&c.__markCompiled();f.exports=c("XController").create("\/intl\/see_translation\/",{ftid:{type:"String",required:true}});},null,{});
+__d('LtgPostTranslation',['Arbiter','AsyncRequest','cx','DOM','Event','fbt','highlight','LoadingIndicator.react','React','XLtgPostTranslationController'],function a(b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q){if(c.__markCompiled)c.__markCompiled();function r(t,u){var v=k.create('div',{'class':"_49k0"},u||m._("No translation available"));k.replace(t,v);if(u)n(v);}var s={bindListener:function(t,u){l.listen(t,'click',function(){p.render(p.createElement(o,{size:'small',color:'white'}),t);var v=q.getURIBuilder().setString('ftid',u).getURI();new i().setURI(v).setHandler(function(w){var x=w.getPayload();r(t,x&&x.text);h.inform('ufi/translationRendered');}).setErrorHandler(function(){r(t,null);}).send();});}};f.exports=s;},null);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Cedexis Radar</title>
+<meta charset="utf-8">
+</head>
+<body>
+<footer>
+<small>
+© 2015 Cedexis Inc.<br>
+Radar JavaScript client<br>
+Application Version: 0.1.186<br>
+Build Timestamp: 1441315773
+</small>
+</footer>
+
+<script>
+(function(window,document){'use strict';var d={"true":!0};window.cedexis=window.cedexis||{};window.cedexis.radar=window.cedexis.radar||{};window.radar=window.radar||{};window.cdx=window.cdx||{};
+function g(a){this.window=a.window;this.document=a.document;this.zoneId=a.w;this.customerId=a.h;this.createdAt=(new Date).getTime();this.domains={code:a.o,init:a.j,report:a.s};this.runCalledAt=0;this.sendPLT=a.u in d;this.startDelay=a.v;this.masterSampleRate=a.k;this.pltSampleRate=a.m;this.remoteProbingSampleRate=a.q;this.sendParentMessages=!1;h(this,"startDelay","radar-start-delay");h(this,"masterSampleRate","radar-master-sample-rate");h(this,"pltSampleRate","radar-plt-sample-rate");h(this,"remoteProbingSampleRate",
+"radar-remote-probing-sample-rate");h(this,"sendParentMessages","radar-send-parent-messages");this.includePartnerTags=a.i in d;this.buildTimestamp=a.g;this.d=[];this.api={requestor:this,zoneId:this.zoneId,customerId:this.customerId,extend:function(a,e){this[a]=e}};this.c=function(a){return/radar-no-ajax/i.test(a.location.search)?!1:a.XMLHttpRequest&&"undefined"!==typeof(new a.XMLHttpRequest).withCredentials?!0:!1}(a.window)}g.prototype.browserHasCorsSupport=function(){return this.c};
+function h(a,b,e){if(1<a.window.location.search.length)for(var f=a.window.location.search.slice(1).split("&"),k=f.length;k--;){var c=f[k].split("=");if(2===c.length&&e===c[0])if(c=parseInt(c[1],10),isNaN(c))a.log("Warning: "+e+" should be set to a number");else{switch(b){case "masterSampleRate":case "remoteProbingSampleRate":case "pltSampleRate":c/=100;break;case "startDelay":c*=1E3;break;case "sendParentMessages":c=0<c?!0:!1}a[b]=c;a.log(b+" set to "+c)}}}
+g.prototype.log=function(a){(this.window.console||{log:function(){}}).log(a)};
+g.prototype.f=function(){return{a:this.c?"1":"0",b:function(a){a=a.createElement("script");return a.addEventListener?"2":a.readyState?"1":"0"}(this.document),l:"function"!==typeof Object.keys?"1":"0",n:function(a,b){if(/msie/i.test(a.navigator.userAgent))if(void 0!==b.documentMode){if(9>b.documentMode)return"0"}else if("BackCompat"===b.compatMode)return"0";return void 0===a.performance?"0":"1"}(this.window,this.document),p:function(a){return"function"===typeof a.postMessage&&"function"===typeof a.addEventListener?
+"1":"0"}(this.window),r:function(a){var b;if(b=a.performance&&"function"===typeof a.performance.getEntriesByType)a=/msie (\d+)/i.exec(a.navigator.userAgent),b=!(a&&10>=parseInt(a[1],10));return b?"1":"0"}(this.window),t:/(iphone|ipad|android|iemobile|opera mini|ucbrowser|blackberry)/i.test(this.window.navigator.userAgent)?"0":"1"}};g.prototype.deviceCaps=g.prototype.f;
+function l(){var a={D:/keynote/i,B:/gomez/i,A:/catchpoint/i,F:/pingdom/i,C:/ip-label/,G:/witbe-/i},b,e,f;b=window.cedexis.radar.allowed_monitoring_agents||[];e=function(a){var c,e;for(c=0;c<b.length;c+=1)if(e=b[c].toLowerCase(),e===a)return!0;return!1};for(f in a)if(a.hasOwnProperty(f)&&a[f].test(window.navigator.userAgent)&&!e(f))return!0;return!1}
+g.prototype.e=function(a,b){for(var e=this.window.cedexis.main,f=this.window.navigator,k=a+":"+e.y64enc(JSON.stringify(b)),c=[this.domains.report,"n1"],x=22;x--;)c.push(0);if("function"===typeof f.sendBeacon&&this.requestSignature&&this.requestSignatureTimestamp&&12E4>(new Date).getTime()-this.requestSignatureTimestamp)c.push(this.requestSignature),c.push(k),c.push(0),f.sendBeacon("//"+c.join("/"));else if(e&&"doInitWithCallback"in e&&this.c){var y=this;e.doInitWithCallback(this,function(){return function(){if(this.responseText){var a=
+/<requestSignature>([\w@]+)</.exec(this.responseText);a&&a[1]&&(c.push(a[1]),c.push(k),c.push(0),y.window.cedexis.main.send_report("//"+c.join("/")))}}}())}};g.prototype.plt_ex=g.prototype.e;g.prototype.impact=function(a){this.window.cedexis&&this.window.cedexis.main?this.e("impact_kpi",a):this.d.push(a)};g.prototype.afterRun=function(){for(var a=10;a--&&0<this.d.length;)this.e("impact_kpi",this.d.shift())};var m=new g({window:window,document:document,w:"1",h:"11326",o:"radar.cedexis.com",j:"cedexis-radar.net",s:"rpt.cedexis.com",u:"false",v:parseInt("10000",10),k:parseFloat("0.6"),m:parseFloat("1"),q:parseFloat("1"),i:"true",g:parseInt("1441315773",10)});
+if(Math.random()<m.masterSampleRate){var n=window.cedexis;n.requestors=n.requestors||{};n.requestors["1;11326"]=m;var p;a:{for(var q=[/opera mini/i,/skyfire/i,/teashark/i,/uzard/i,/puffin/i,/yabrowser/i],r=q.length;r--;)if(q[r].test(m.window.navigator.userAgent)){p=!0;break a}p=!1}var t;if(t=!p){var u;(u=!l())||(u=/radar-allow-monitors=1/.test(m.window.location.search));t=u}if(t){"function"===typeof m.window.cedexisInit&&m.window.cedexisInit(m.api);var v=
+/cedexisInit(\d+)/,w;for(w in m.window){var z=v.exec(w);if(z&&m.customerId==z[1]&&"function"===typeof m.window[z[0]])m.window[w](m.api)}setTimeout(function(){var a;var b;(b=m.window.crypto||m.window.msCrypto)&&b.getRandomValues?(a=new Uint32Array(1),b.getRandomValues(a),a=a[0]):a=0;m.transactionId=a||Math.floor(1E9*Math.random());a=m.f();var e=b="",f;for(f in a)a.hasOwnProperty(f)&&(e+=b+f+"="+a[f],b="&");f="//"+m.domains.code+"/"+m.buildTimestamp+"/radar/main.js?"+e;a:{if(0<m.window.location.search.length){a=
+m.window.location.search.slice(1).split("&");b=[];for(e=a.length;e--;)"providers=all"===a[e]&&b.push(a[e]);b=b.join("&");if(0<b.length){a="&"+b;break a}}a=""}f=f+a;a=m.document.getElementById("cdx");a||(a=m.document.createElement("div"),a.id="cdx",m.document.body.appendChild(a));b=m.document.createElement("script");b.type="text/javascript";b.async=!0;b.src=f;a.appendChild(b)},m.startDelay)}};}(window,document));
+</script>
+
+<div id="cdx"><script src="radar_data/main.js" async="" type="text/javascript"></script><script src="radar_data/r20.gif" async=""></script><script src="radar_data/spacer.gif" async=""></script></div></body></html>

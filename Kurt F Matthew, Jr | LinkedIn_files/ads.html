@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Ads By LinkedIn Members</title>
+<style type="text/css">
+  body { background: #fff; font: 10px/1 Arial, Helvetica, "Nimbus Sans L", sans-serif; margin: 0; padding: 0; }
+  a,
+  a img { border: none; text-decoration: none; }
+  h4 { color: #666; font-size: 12px; font-weight: bold; line-height: 1; margin: 0; padding: 6px 0 6px 10px; text-align: center; }
+  h4 a { color: #666; }
+  h5 { color: #039; font-size: 15px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; }
+  h5 a { color: #039; display: block; }
+  p { color: #333; font-size: 12px; line-height: 1.4; margin: 0 0 5px; }
+  p a { color: #333; display: block; }
+  p a:visited { color: #333; }
+  p span.display-url,
+  p a:visited span.display-url { color: #039; }
+  p.posted-by { border-top: none; clear: both; color: #666; font-size: 11px; padding-right: 70px; padding-top: 0px; height: 15px; overflow: hidden; }
+  p.posted-by a { color: #039; display: inline; }
+
+
+  .section { text-align:left; width: 300px; height: 246px;}
+  .dad,
+  .job { border-top: 1px dotted #999; _border-top: 1px solid #bfbfbf; margin: 0 10px; padding: 7px 0 5px; }
+  .what { bottom: 20px; _bottom: 27px; color: #666; position: absolute; right: 15px; text-decoration: underline; text-align: right; width: 65px; }
+  .what:visited { color: #666; text-decoration: underline; }
+  .first { margin-top: 5px; border-top: 0; padding-top: 0; }
+
+  .dad .logo-border {height:50px; width:50px; border:1px solid #E6E6E6}
+  .dad a.logo { float: left; height: 45px; margin: 0px 10px 5px 0; *margin-bottom: 0;  padding:4px 10px 4px 2px; width:45px; }
+  .dad img {background: #fff; border: 1px solid #ccc; padding: 3px; max-width: 45px; max-height: 45px;}
+  /* All Formats */
+  .formats .section { background: #fff; width: 296px; height: 250px; }
+  .formats h4 { font-size: 10px; font-weight: normal; margin-bottom:5px; text-align:left; }
+  .section .header { background:url(https://static.licdn.com/scds/common/u/img/sprite/sprite_global_v4.png) no-repeat scroll 100% -180px #E8E8E8; overflow:hidden; padding:0; width:100%; }
+  .section .header h4 { background:url(https://static.licdn.com/scds/common/u/img/sprite/sprite_global_v4.png) no-repeat scroll 0 -180px #E8E8E8; float:left; font-size: 10px; line-height:1.2; margin-bottom:0px; padding:5px 5px 5px 10px; }
+  .formats h4 a { color: #666; }
+  .formats h4 a:visited { color: #666; }
+  .formats h5 { font-size: 15px; font-weight: normal; }
+  .formats h5 a { color:#069; font-weight:bold; text-decoration: none;}
+  .formats h5 a:visited { color: #069; }
+
+  .section .content { border-bottom:1px solid #e6e6e6 ; border-left:1px solid #e6e6e6 ; border-right:1px solid #e6e6e6; -moz-border-radius-bottomright:5px; -moz-border-radius-bottomleft:5px; -webkit-border-bottom-right-radius:5px;	-webkit-border-bottom-left-radius:5px; border-bottom-right-radius:5px; border-bottom-left-radius:5px; height:216px;}
+  .formats .dad,
+  .formats .job { border-top: 1px dotted #999; _border-top: 1px solid #bfbfbf; margin: 0 5px; height: 60px; padding: 5px 0 8px; position: relative;}
+  .formats .first { border-top: 0; padding-top:5px; }
+  .formats p { line-height: 1.3; margin-bottom: 5px; }
+  .formats p a { color: #333; }
+  .formats p span.display-url { color: #039; }
+  .formats p.posted-by { border-top: none; padding-top: 0; }
+  .formats .what { bottom: 17px; _bottom: 28px; text-decoration: none; }
+
+  /* test 3-1 */
+  .format-exp-3-1 .member-ads { height: 250px; overflow: hidden; }
+  .format-exp-3-1 { font: 13px helvetica, arial, sans-serif; font-color: #666;}
+  .format-exp-3-1 .section { background: #fff; padding: 0; }
+  .format-exp-3-1 .section .content { border: none; height: 220px;}
+  .format-exp-3-1 .section .header { background: none; }
+  .format-exp-3-1 .section .header h4 { background: none; padding: 5px 0 5px 5px; float: none;}
+  .format-exp-3-1 .section .header h4 a { background: none; color: #000; font-size: 14px; font-weight: bold;  }
+  .format-exp-3-1 .section h5 { font-size: 13px; line-height: 1; margin: 1px 0 2px 0; }
+  .format-exp-3-1 .section h5 a { color: #0073B2; font-weight: normal;}
+  .format-exp-3-1 .section h4 a { color: #666; font-size:13px; font-weight: bold; }
+  .format-exp-3-1 .section .dad { overflow: hidden; height: 61px; border-top: none; padding: 6px 0; background: url(https://static.licdn.com/scds/common/u/img/bg/bg_grey_dotted_h-line_5x1.png) repeat-x scroll 0 0 transparent; }
+  .format-exp-3-1 .section .dad.first{ background: none; }
+  .format-exp-3-1 .twocount .dad { height:100px; }
+  .format-exp-3-1 .section .dad a.logo { width: 50px; height: 50px; margin: 1px 14px 10px 0; padding: 0; }
+  .format-exp-3-1 .section .dad img { border: none; padding: 0; max-width: 50px; max-height: 50px; }
+  .format-exp-3-1 p { margin-bottom: 0; }
+  .format-exp-3-1 p a { color: #666;  font-size:13px; }
+  .format-exp-3-1 .section .more,
+  .format-exp-3-1 .section .what { display: none; }
+
+  /* test 3-2 */
+  .format-exp-3-2 .member-ads { height: 250px; overflow: hidden; }
+  .format-exp-3-2 { font: 13px helvetica, arial, sans-serif; font-color: #666;}
+  .format-exp-3-2 .section { background: #fff; padding: 0; }
+  .format-exp-3-2 .section .content { border: none; height: 220px;}
+  .format-exp-3-2 .section .header { background: none; }
+  .format-exp-3-2 .section .header h4 { background: none; padding: 5px 0 5px 5px; float: none;}
+  .format-exp-3-2 .section .header h4 a { background: none; color: #000; font-size: 14px; font-weight: bold;}
+  .format-exp-3-2 .section h5 { font-size: 13px; line-height: 1; margin: 5px 0 2px 0; }
+  .format-exp-3-2 .section h5 a { color: #0073B2; font-weight: normal;}
+  .format-exp-3-2 .section h4 a { color:#666; font-size:130%; font-weight:bold }
+  .format-exp-3-2 .section .dad a.logo { width: 50px; height: 50px; margin: 5px 14px 0 0; padding: 0; }
+  .format-exp-3-2 .section .dad img { border: none; padding: 0; max-width: 50px; max-height: 50px; }
+  .format-exp-3-2 p { margin-bottom: 0; }
+  .format-exp-3-2 p a { color: #666; font-size:13px; }
+  .format-exp-3-2 p.description { margin-left: 64px;}
+  .format-exp-3-2 .wologo p.description { margin-left: 0;}
+  .format-exp-3-2 p.more { padding-bottom: 0; text-align: right;  margin: 0px 2px 0 0; line-height: 1.1; *line-height: 1.3; height:auto; position: absolute; bottom: 4px; right: 0;}
+  .format-exp-3-2 p.more a { color: #0073B2; display:inline; text-decoration: none; }
+  .format-exp-3-2 .dad,
+  .format-exp-3-2 .job { overflow: hidden; border-top: none; height: 100px; padding: 5px 0; position: relative; }
+  .format-exp-3-2 .dad.first {  background: url(https://static.licdn.com/scds/common/u/img/bg/bg_grey_dotted_h-line_5x1.png) repeat-x scroll 0 bottom transparent; }
+  .format-exp-3-2 .section .what { display: none; }
+
+  .no-background, .no-background .section { background: none;}
+
+  /* Add image borders */
+  .dad span.vert-align { border: 1px solid #ccc; padding: 3px; }
+  .dad span.vert-align img { border: none; padding: 0; max-width: 45px; max-height: 45px; }
+
+  .format-exp-3-1 .section .dad span.vert-align,
+  .format-exp-3-2 .section .dad span.vert-align { border: none; padding: 0; }
+
+  .format-exp-3-1 .section .dad span.vert-align img,
+  .format-exp-3-2 .section .dad span.vert-align img { max-width: 50px; max-height: 50px; }
+
+</style>
+<style type="text/css">
+  span.vert-align { text-align: center; display: inline-block !important; vertical-align: middle !important; padding: 0 !important; margin: 0 !important; background-color: #fff; }
+  span.vert-align img { width: auto !important; height: auto !important; vertical-align: middle !important; display: inline-block !important; }
+  span.vert-align._25_25 { height: 25px !important; width: 25px !important; line-height: 25px !important; }
+  span.vert-align._25_25 img._25_25 { max-width: 25px; max-height: 25px; }
+  span.vert-align._30_30 { height: 30px !important; width: 30px !important; line-height: 30px !important; }
+  span.vert-align._30_30 img._30_30 { max-width: 30px; max-height: 30px; }
+  span.vert-align._40_40 { height: 40px !important; width: 40px !important; line-height: 40px !important; }
+  span.vert-align._40_40 img._40_40 { max-width: 40px; max-height: 40px; }
+  span.vert-align._50_50 { height: 50px !important; width: 50px !important; line-height: 50px !important; }
+  span.vert-align._50_50 img._50_50 { max-width: 50px; max-height: 50px; }
+  span.vert-align._60_60 { height: 60px !important; width: 60px !important; line-height: 60px !important; }
+  span.vert-align._60_60 img._60_60 { max-width: 60px; max-height: 60px; }
+  span.vert-align._65_65 { height: 65px !important; width: 65px !important; line-height: 65px !important; }
+  span.vert-align._65_65 img._65_65 { max-width: 65px; max-height: 65px; }
+  span.vert-align._80_80 { height: 80px !important; width: 80px !important; line-height: 80px !important; }
+  span.vert-align._80_80 img._80_80 { max-width: 80px; max-height: 80px; }
+</style>
+<style type="text/css">
+.play-icon {
+  position: relative;
+  display: block;
+  left: 2px;
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999em;
+  cursor: pointer;
+  background: transparent url(https://static.licdn.com/scds/common/u/images/apps/sasbe/sprite_playarrow_40x80.png) center 0 no-repeat;
+}
+.dad:hover .video-thumb .play-icon {background-position: center -40px;}
+.hide-video .play-icon {display: block;}
+
+.dad .video-thumb { background-color: #FFF; }
+.dad .video-thumb img { border: none; padding: 0; margin: 0; opacity: 0.12; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);}
+
+.format-exp-1-8 .play-icon { top: -42px; left: 4px; }
+.format-exp-1-8 .dad .video-thumb { border: 1px solid #CCC; padding: 3px; margin: 0 4px 0 0; }
+.format-exp-1-8 .dad .video-thumb img { margin-top: 7px; }
+
+.format-exp-1-5 .dad .video-thumb,
+.format-exp-2-1 .dad .video-thumb,
+.format-exp-2-2 .dad .video-thumb,
+.format-exp-2-3 .dad a.video-thumb { border: 1px solid #CCC; height: 34px; padding: 3px; margin: 0 10px 0 2px;  }
+.format-exp-2-3 .dad a.video-thumb { margin-right: 12px; }
+
+.format-exp-2-8 .play-icon { top: 5px; left: 5px; *top: -45px; *left: 0;}
+.format-exp-2-12 .play-icon { top: 5px; left: 5px; *top: -45px; *left: 0;}
+.format-exp-3-1 .play-icon { top: -43px; left: 4px; }
+.format-exp-3-2 .play-icon,
+.format-300x250-exp-4-1 .play-icon,
+.format-300x250-exp-4-2 .play-icon { top: -42px; left: 4px; }
+.format-exp-3-1 .dad .video-thumb { padding: 3px; margin: 0 10px 0 2px; }
+.format-300x250-exp-4-1 .dad .video-thumb { background: transparent; }
+
+.format-300x250-exp-4-3 .play-icon { left: -50px; -moz-transition: left 0.06s linear 0.12s; -webkit-transition: left 0.06s linear 0.12s; transition: left 0.06s linear 0.12s;}
+.format-300x250-exp-4-3 .video-thumb { overflow: hidden; }
+.format-300x250-exp-4-3 .video-thumb img { opacity: 1; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); -moz-transition: opacity 0.12s linear 0.17s; -webkit-transition: opacity 0.12s linear 0.17s; transition: opacity 0.12s linear 0.17s;}
+.format-300x250-exp-4-3 .dad:hover .video-thumb .play-icon { left: 4px; }
+.format-300x250-exp-4-3 .dad:hover .video-thumb img { opacity: 0.12; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12); -moz-transition-delay: 0s; -webkit-transition-delay: 0s; transition-delay: 0s; }
+
+.format-300x250-exp-4-4 .play-icon { top: -35px; left: 6px; }
+.format-300x250-exp-4-4 .video-thumb {  background: transparent url(https://static.licdn.com/scds/common/u/images/apps/sasbe/bg_circle_plate_44x44.png) center center no-repeat; }
+.format-300x250-exp-4-4 .video-thumb img { visibility: hidden;}
+
+#ads-video {
+  background-color: #004D73;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #004D73), color-stop(50%, #006AAD), color-stop(100%, #004D73));
+  background-image: -webkit-linear-gradient(top, #004D73, #006AAD, #004D73);
+  background-image: -moz-linear-gradient(top, #004D73, #006AAD, #004D73);
+  background-image: -o-linear-gradient(top, #004D73, #006AAD, #004D73);
+  background-image: -ms-linear-gradient(top, #004D73, #006AAD, #004D73);
+  background-image: linear-gradient(top, #004D73, #006AAD, #004D73);
+  border-radius: 5px;
+  border: none;
+  color: #99B6C5;
+  display: block;
+  font-size: 11px;
+  margin-left: 0;
+  position: relative;
+  top: 0;
+  width: 298px;
+  height: 250px;
+  visibility: visible;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-transition: top 0s .4s, opacity .4s ease-in-out;
+  -webkit-transition: top 0s .4s, opacity .4s ease-in-out;
+  transition: top 0s .4s, opacity .4s ease-in-out;
+}
+
+.flip #ads-video {
+  display: block;
+  opacity : 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  visibility: visible;
+  z-index: 10;
+  top: -251px;
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+#ads-video span,
+#ads-video a,
+#ads-video p {
+  text-shadow: 0 -1px 0 #111;
+}
+#ads-video a.info-request {
+  text-shadow: none;
+}
+
+#ads-video .hd {
+  height: 16px;
+  line-height: 1.2;
+  padding: 5px 0;
+}
+
+#ads-video .hd span {
+  background: url(https://static.licdn.com/scds/common/u/img/sprite/sprite_global_v7.png) no-repeat 100% -1498px;
+  cursor: pointer;
+  float: right;
+  margin-right: 12px;
+  padding-right: 14px;
+}
+
+#ads-video-body {
+  background: url(https://static.licdn.com/scds/common/u/img/anim/anim_loading_blue_100x100.gif) no-repeat center center;
+  height: 190px;
+}
+
+#ads-video-finish {
+  display: none;
+  height: 190px;
+}
+
+#ads-video-finish .replay-video {
+  background: #002f44 url(https://static.licdn.com/scds/common/u/img/icon/icon_nus_play_video_42x42.png) 18px center no-repeat;
+  color: #99B6C5;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 15px 15px 30px;
+  margin: 0 30px 10px 30px;
+  border-radius: 5px;
+
+}
+#ads-video-finish .replay-video:hover {
+  background-color: #001A26;
+  color: #FFF;
+}
+#ads-video-finish #preview-content {
+  margin: 0 30px;
+
+}
+#ads-video-finish #preview-content h5 { font-size: 15px; margin-bottom: 6px;}
+#ads-video-finish #preview-content .description { font-size: 14px; margin: 0 0 12px 0;}
+#ads-video-finish #preview-content .more { text-align: left; font-size: 12px; position: static;}
+#ads-video-finish #preview-content h5 a,
+#ads-video-finish #preview-content .description a,
+#ads-video-finish #preview-content .more a {
+  color: #FFF;
+}
+
+#ads-video .ft {
+  margin-top: 0;
+  overflow: hidden;
+  height: 34px;
+  width: 100%;
+}
+
+#ads-video .ft a {
+  color: #99B6C5;
+}
+
+#ads-video .ft .skip {
+  padding-left: 12px;
+}
+
+#ads-video .ft .request-info {
+  float: right;
+  padding-right: 12px;
+  text-align: right;
+}
+
+#ads-video .ft .info-overlay {
+  background-color: #002f44;
+  border-radius: 0 0 5px 5px;
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  -moz-transition: visibility 0s ease .4s, height .4s ease-in-out;
+  -webkit-transition: visibility 0s ease .4s, height .4s ease-in-out;
+  transition: visibility 0s ease .4s, height .4s ease-in-out;
+}
+#ads-video .ft .info-overlay .info-request {
+  float: left;
+  margin: 6px 6px 0 4px;
+}
+#ads-video .ft .info-overlay p {
+  padding: 2px 23px 0 0;
+  color: #99B6C5;
+  margin: 0 0 0 5px;
+  font-size: 11px;
+}
+
+#ads-video .ft .info-overlay .close-info {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 11px;
+  background: transparent url(https://static.licdn.com/scds/common/u/img/sprite/sprite_global_v7.png) no-repeat 100% -1498px;
+}
+#ads-video .ft.show-info .info-overlay {
+  visibility: visible;
+  height: 34px;
+  -moz-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+#ads-video .ft .ft-links { margin-top: 2px; }
+#ads-video .ft.info-hide .request-info,
+#ads-video .ft.info-sent .request-info,
+#ads-video .ft.info-sent .info-request,
+#ads-video .ft.info-sent p { display: none; }
+
+#ads-video .ft .info-sent-message  {
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-transition: all .8s ease-in-out;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
+}
+#ads-video .ft.info-sent .info-sent-message {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  display: block;
+}
+
+.video-done #ads-video #ads-video-body {
+  height: 0;
+  visibility: hidden;  /* Need this to hide flash video player */
+}
+.video-done #ads-video #ads-video-finish {
+  display: block;
+}
+.video-done #ads-video .ft .skip {
+  display: none;
+}
+
+#ads-video-noflash {
+  display: none;
+  height: 0;
+}
+
+.no-video {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  background-color: #FEE;
+  width: 90%;
+  margin: 0 auto;
+  padding: 8px;
+  text-shadow: 1px 1px #fff;
+  -moz-box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+  box-shadow: 2px 2px 4px #aaa;
+  -moz-animation: slideInMsg .4s ease-out, fadeIn .5s;
+  -webkit-animation: slideInMsg .4s ease-out, fadeIn .5s;
+  animation: slideInMsg .4s ease-out, fadeIn .5s;
+}
+.no-video .dismiss-no-video {
+  background: url(https://static.licdn.com/scds/common/u/img/sprite/sprite_global_v6.png) no-repeat 100% -1496px;
+  text-indent: -12345px;
+  cursor: pointer;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 2px;
+  right: 5px;
+}
+.dad .no-video a {
+  color: #069;
+  display: inline;
+  text-decoration: underline;
+}
+.dad h5,
+.dad .description,
+.dad .logo  {
+  -moz-transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+
+.dad.hide-video h5,
+.dad.hide-video .description,
+.dad.hide-video .logo {
+  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+#leadgen iframe,
+#leadgen form {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+/* Animations */
+@-moz-keyframes slideInMsg {
+  from { margin-left: -300px; }
+  to { margin-left: 8px; }
+}
+
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes slideInMsg {
+  from { margin-left: -300px; }
+  to { margin-left: 8px; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInMsg {
+  from { margin-left: -300px; }
+  to { margin-left: 8px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+<style type="text/css">
+  span.vert-align { text-align: center; display: inline-block !important; vertical-align: middle !important; padding: 0 !important; margin: 0 !important; background-color: #fff; }
+  span.vert-align img { width: auto !important; height: auto !important; vertical-align: middle !important; display: inline-block !important; }
+  span.vert-align._25_25 { height: 25px !important; width: 25px !important; line-height: 25px !important; }
+  span.vert-align._25_25 img._25_25 { max-width: 25px; max-height: 25px; }
+  span.vert-align._30_30 { height: 30px !important; width: 30px !important; line-height: 30px !important; }
+  span.vert-align._30_30 img._30_30 { max-width: 30px; max-height: 30px; }
+  span.vert-align._40_40 { height: 40px !important; width: 40px !important; line-height: 40px !important; }
+  span.vert-align._40_40 img._40_40 { max-width: 40px; max-height: 40px; }
+  span.vert-align._50_50 { height: 50px !important; width: 50px !important; line-height: 50px !important; }
+  span.vert-align._50_50 img._50_50 { max-width: 50px; max-height: 50px; }
+  span.vert-align._60_60 { height: 60px !important; width: 60px !important; line-height: 60px !important; }
+  span.vert-align._60_60 img._60_60 { max-width: 60px; max-height: 60px; }
+  span.vert-align._65_65 { height: 65px !important; width: 65px !important; line-height: 65px !important; }
+  span.vert-align._65_65 img._65_65 { max-width: 65px; max-height: 65px; }
+  span.vert-align._80_80 { height: 80px !important; width: 80px !important; line-height: 80px !important; }
+  span.vert-align._80_80 img._80_80 { max-width: 80px; max-height: 80px; }
+</style>
+<link href="ads_data/css.css" type="text/css" rel="stylesheet">
+</head>
+<body class="no-background">
+<div class="formats format-exp-3-1">
+<div id="member-ads" class="member-ads">
+<div class="section ads">
+<div class="header">
+<h4>
+<a href="https://www.linkedin.com/ads/start?src=en-all-ad-li-ads_by_li&amp;trk=ads_by_li&amp;utm_medium=ad&amp;utm_source=li&amp;utm_campaign=ads_by_li" target="_blank">Ads By LinkedIn Members</a>
+</h4>
+</div>
+<div class="content">
+<div class="dad dad-0 wilogo first">
+<a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_y8-Ku_ZlZ8KW9AGgxI3NfazeTSjg4XmMKhcrGd3swWmp7fIoXARkq1zbfhAy0Sfgdm6XeFaalyGiR8vlEubT6nf1Ledhe6OUwy9FYIj2WYXVFx-fSSUWBokXdVXIGfbMlDxd-y6OMbvjGeQVf2Osj_r5fMEeCYaSchYt2VDejWtEnD4XVRIGc5cb8ICrToYctj2fn3svnoihFgu85NCKS1y3NTKGPAUYeE77wgwSmM-1qolztuuBDeq5QPal7NyAtwUn0YlSrUNbNtS_ra7Ga_To7QamtSn2Fku1XDWSo6guXfQ3gkNwuaF84gTn9K1dc79YX_pb1XXWpNZbblwcyrLKHdrGFONqqMKjQM9ASWHP0Pc6_0qBlMyB6D7QSGvzNs4bxEr0lUdYKIRskL0PAPW0z8Qjqujk5uQX6aBRiVsx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUFCX8m7Ft2-P7x0YnX7jgOB1YguNNZwxuS-oUMvQ1aipV-gToF6GdpJwWXqs79mMB-PfX_ELk_HwOPxEQGniEGtIEBnIPS_h_RgPjoQXtyisyAkGukcclEewPqC_vh5Uv_884eYHaQgayOtWyerYkseu14jrKV7DmbTjm_4iGfcbkrVas7ruZOW-chYKqRjrFhSnSv_a0DsSidAKEBT9p2UpRbBOsarjxjoHymanzr56TtrSewqClZPLhVLRrl4wERUSuRG588sIlDVE38qmIB-1cS4T3GkpdhFaIRG597kA" target="_blank" class="logo">
+<span class="vert-align _50_50"><img src="ads_data/AAEAAQAAAAAAAAIlAAAAJGM1M2E1ODZjLTQwMjQtNDYwZi04ZjhmLWVlOTdl.png" class="_50_50" alt="PactSafe"></span>
+</a>
+<h5 class="headline"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_y8-Ku_ZlZ8KW9AGgxI3NfazeTSjg4XmMKhcrGd3swWmp7fIoXARkq1zbfhAy0Sfgdm6XeFaalyGiR8vlEubT6nf1Ledhe6OUwy9FYIj2WYXVFx-fSSUWBokXdVXIGfbMlDxd-y6OMbvjGeQVf2Osj_r5fMEeCYaSchYt2VDejWtEnD4XVRIGc5cb8ICrToYctj2fn3svnoihFgu85NCKS1y3NTKGPAUYeE77wgwSmM-1qolztuuBDeq5QPal7NyAtwUn0YlSrUNbNtS_ra7Ga_To7QamtSn2Fku1XDWSo6guXfQ3gkNwuaF84gTn9K1dc79YX_pb1XXWpNZbblwcyrLKHdrGFONqqMKjQM9ASWHP0Pc6_0qBlMyB6D7QSGvzNs4bxEr0lUdYKIRskL0PAPW0z8Qjqujk5uQX6aBRiVsx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUFCX8m7Ft2-P7x0YnX7jgOB1YguNNZwxuS-oUMvQ1aipV-gToF6GdpJwWXqs79mMB-PfX_ELk_HwOPxEQGniEGtIEBnIPS_h_RgPjoQXtyisyAkGukcclEewPqC_vh5Uv_884eYHaQgayOtWyerYkseu14jrKV7DmbTjm_4iGfcbkrVas7ruZOW-chYKqRjrFhSnSv_a0DsSidAKEBT9p2UpRbBOsarjxjoHymanzr56TtrSewqClZPLhVLRrl4wERUSuRG588sIlDVE38qmIB-1cS4T3GkpdhFaIRG597kA" target="_blank">Privacy Policy Management</a></h5>
+<p class="description"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_y8-Ku_ZlZ8KW9AGgxI3NfazeTSjg4XmMKhcrGd3swWmp7fIoXARkq1zbfhAy0Sfgdm6XeFaalyGiR8vlEubT6nf1Ledhe6OUwy9FYIj2WYXVFx-fSSUWBokXdVXIGfbMlDxd-y6OMbvjGeQVf2Osj_r5fMEeCYaSchYt2VDejWtEnD4XVRIGc5cb8ICrToYctj2fn3svnoihFgu85NCKS1y3NTKGPAUYeE77wgwSmM-1qolztuuBDeq5QPal7NyAtwUn0YlSrUNbNtS_ra7Ga_To7QamtSn2Fku1XDWSo6guXfQ3gkNwuaF84gTn9K1dc79YX_pb1XXWpNZbblwcyrLKHdrGFONqqMKjQM9ASWHP0Pc6_0qBlMyB6D7QSGvzNs4bxEr0lUdYKIRskL0PAPW0z8Qjqujk5uQX6aBRiVsx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUFCX8m7Ft2-P7x0YnX7jgOB1YguNNZwxuS-oUMvQ1aipV-gToF6GdpJwWXqs79mMB-PfX_ELk_HwOPxEQGniEGtIEBnIPS_h_RgPjoQXtyisyAkGukcclEewPqC_vh5Uv_884eYHaQgayOtWyerYkseu14jrKV7DmbTjm_4iGfcbkrVas7ruZOW-chYKqRjrFhSnSv_a0DsSidAKEBT9p2UpRbBOsarjxjoHymanzr56TtrSewqClZPLhVLRrl4wERUSuRG588sIlDVE38qmIB-1cS4T3GkpdhFaIRG597kA" target="_blank">Put Our Online Privacy Policy Mgmt Solution To Work Today. Learn More Now.</a></p>
+</div>
+<div class="dad dad-1 wilogo">
+<a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_2YUYqROjIufBOXDHBiYiW83NjQUD3kftIvFvuExCVJfHYPlDKdpv4Mh6J3lwndq4U-5-65qMZzu_21_-jBlyplk-ZmUdr_CsJWo2PWmN0Ik3liIciDT1PttaKvjsbhmzBSvLUdQY4-Amt3s0YDGX_31wAHZ5TvYY-IK_3Y3EjwL40q05_kJRGZW0ZO-VAIRiSa2wx_bCyu9q37xVB8PuWrZq9X4maPC2QZO-kCtLTkJEwakXWO-OTuAanmSVbbLykFjT0oRtLGXF95JfCvoQZc3SZLjOtrkxDIqiUEMkAkrmxf5yqFpsg4yluguaN6UlES0ZuSDst7sz5PTXNg8fa8cB-B0s28HvSje6Zkjj0AeWQKBiRldfnAry1rClYMNxvVRQqkawUGGtJ2bA0AQcjbIfRZl3JnEkHe-CdmebPXbRs65JlSeO6S0i0UyDhWAxJExJL7_6r7DU-HJJ9W3myYKtrMoS3O6UgPeSRRfq9uESFBUzNUn5dE3oqQiwXvxkexdc3ZeDZcYZvdLcc_dRvkFgSEkJDI6O5DN3iDPggb5t5Rk4TZ9-X8TAfo3_PUSAY9qHhq0zpsk8JNkf6QSyaGX7-1QlPHFn1ftVxMyQjwE52K58G8cOg5vpl6P6V5phVdR9ZnRWfBchM2hx0aaXcakSPCXyZzTvNmlmUFiFQTadhgneg_mHD8NIPNmc50QW8aVQMSbByiY_wvQniL4OFIca_zNeQuNbKC6JToqDKRBuUD64HizuxdwHnz3EvEMvlPxIctzIfXsKW3BCgXeVp9c1suqf2Juy0qadl_qYinth6xtebhSF6BjwwMf4U7pLobHEZE4DkM6-ohIF_0S7YzrBvBInWl8D-MQ1hBMSkMsl6D04IYpiL2cYM0UOsQa0e1cS4T3GkpdhFaIRG597kA" target="_blank" class="logo">
+<span class="vert-align _50_50"><img src="ads_data/3fa672b.png" class="_50_50" alt="Full Sail University Marketing"></span>
+</a>
+<h5 class="headline"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_2YUYqROjIufBOXDHBiYiW83NjQUD3kftIvFvuExCVJfHYPlDKdpv4Mh6J3lwndq4U-5-65qMZzu_21_-jBlyplk-ZmUdr_CsJWo2PWmN0Ik3liIciDT1PttaKvjsbhmzBSvLUdQY4-Amt3s0YDGX_31wAHZ5TvYY-IK_3Y3EjwL40q05_kJRGZW0ZO-VAIRiSa2wx_bCyu9q37xVB8PuWrZq9X4maPC2QZO-kCtLTkJEwakXWO-OTuAanmSVbbLykFjT0oRtLGXF95JfCvoQZc3SZLjOtrkxDIqiUEMkAkrmxf5yqFpsg4yluguaN6UlES0ZuSDst7sz5PTXNg8fa8cB-B0s28HvSje6Zkjj0AeWQKBiRldfnAry1rClYMNxvVRQqkawUGGtJ2bA0AQcjbIfRZl3JnEkHe-CdmebPXbRs65JlSeO6S0i0UyDhWAxJExJL7_6r7DU-HJJ9W3myYKtrMoS3O6UgPeSRRfq9uESFBUzNUn5dE3oqQiwXvxkexdc3ZeDZcYZvdLcc_dRvkFgSEkJDI6O5DN3iDPggb5t5Rk4TZ9-X8TAfo3_PUSAY9qHhq0zpsk8JNkf6QSyaGX7-1QlPHFn1ftVxMyQjwE52K58G8cOg5vpl6P6V5phVdR9ZnRWfBchM2hx0aaXcakSPCXyZzTvNmlmUFiFQTadhgneg_mHD8NIPNmc50QW8aVQMSbByiY_wvQniL4OFIca_zNeQuNbKC6JToqDKRBuUD64HizuxdwHnz3EvEMvlPxIctzIfXsKW3BCgXeVp9c1suqf2Juy0qadl_qYinth6xtebhSF6BjwwMf4U7pLobHEZE4DkM6-ohIF_0S7YzrBvBInWl8D-MQ1hBMSkMsl6D04IYpiL2cYM0UOsQa0e1cS4T3GkpdhFaIRG597kA" target="_blank">Internet Marketing Degree</a></h5>
+<p class="description"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_2YUYqROjIufBOXDHBiYiW83NjQUD3kftIvFvuExCVJfHYPlDKdpv4Mh6J3lwndq4U-5-65qMZzu_21_-jBlyplk-ZmUdr_CsJWo2PWmN0Ik3liIciDT1PttaKvjsbhmzBSvLUdQY4-Amt3s0YDGX_31wAHZ5TvYY-IK_3Y3EjwL40q05_kJRGZW0ZO-VAIRiSa2wx_bCyu9q37xVB8PuWrZq9X4maPC2QZO-kCtLTkJEwakXWO-OTuAanmSVbbLykFjT0oRtLGXF95JfCvoQZc3SZLjOtrkxDIqiUEMkAkrmxf5yqFpsg4yluguaN6UlES0ZuSDst7sz5PTXNg8fa8cB-B0s28HvSje6Zkjj0AeWQKBiRldfnAry1rClYMNxvVRQqkawUGGtJ2bA0AQcjbIfRZl3JnEkHe-CdmebPXbRs65JlSeO6S0i0UyDhWAxJExJL7_6r7DU-HJJ9W3myYKtrMoS3O6UgPeSRRfq9uESFBUzNUn5dE3oqQiwXvxkexdc3ZeDZcYZvdLcc_dRvkFgSEkJDI6O5DN3iDPggb5t5Rk4TZ9-X8TAfo3_PUSAY9qHhq0zpsk8JNkf6QSyaGX7-1QlPHFn1ftVxMyQjwE52K58G8cOg5vpl6P6V5phVdR9ZnRWfBchM2hx0aaXcakSPCXyZzTvNmlmUFiFQTadhgneg_mHD8NIPNmc50QW8aVQMSbByiY_wvQniL4OFIca_zNeQuNbKC6JToqDKRBuUD64HizuxdwHnz3EvEMvlPxIctzIfXsKW3BCgXeVp9c1suqf2Juy0qadl_qYinth6xtebhSF6BjwwMf4U7pLobHEZE4DkM6-ohIF_0S7YzrBvBInWl8D-MQ1hBMSkMsl6D04IYpiL2cYM0UOsQa0e1cS4T3GkpdhFaIRG597kA" target="_blank">Be an expert in Internet Marketing with your Online Master's Degree. Info-</a></p>
+</div>
+<div class="dad dad-2 wilogo">
+<a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_3RURJbgg1cp8DGPkXKqXXaK9mERSzmqVoHL2yNFLMEhnC8ttqCuCu4WZHUh5nXoSYlONKgnkvMJYhk3dy8E9FskQRI_46WJqLN_D7EVfkKRT33pglkaMWVkEBhY-lMcOK9Wd68RvKn9srF9b3y7hWq1nLjf_ISkK997f5q1g7lkrC55-fsQsggPcZumYlALSYKv1b6Ggh7CAKlMOk1m1kKlXURz7gjdFhV_xCL1ZadNhC0-Q0zPh0Z6lZG4rIaDHqmQp0VNSnK7fcnt1vXDPjOBqdNXNORceTbaFw0FnkLNPmJt2E_LXiycCRR6NDiXKtHpvzIV1n8wt0xhUkQQiwdBqdNXNORceTbaFw0FnkLNM9IsMxAz6b5WWlJP9OHGRJd0zT_4wxhSEF1yq2pGI7a1_6q1aLQwwnxaEAbFXE7vdLemCxVo8ZvCDJiV4QCHSPwdYvcy25rPOTJ0jk1JPDHdbvIoKih5m-o5g2yMakWg4EpNpsiEj2YJiKiXfftOeQx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUws7lY_FnMVohb-c1tOt7r_MP-rjNtcD3C8rkzuWZjhdPkuy8jiP3Q0WqxG-uZ4V9GzVwsCsWq-EOS7P5jW2HFZIEBnIPS_h_RgPjoQXtyisRH9muXlq7E85YDBPc-hV5mJ1n8qHPl-3XEIiIL3GRjCoEWjJHoN-akiJpLpl1oeOkrVas7ruZOW-chYKqRjrFl6sNmUZWV1-OSFl0unuD7UC7DbCgQcV2m2xAhNL1YborZe9aLZ6PwRBUyi_O0pwvV7GJj5C7_mUW2dvW9vDQFS1cS4T3GkpdhFaIRG597kA" target="_blank" class="logo">
+<span class="vert-align _50_50"><img src="ads_data/AAEAAQAAAAAAAAIIAAAAJDE3M2JmNDMwLTAwN2MtNDlkYS04MDg1LWQzZTQ1.png" class="_50_50" alt="elamelu danek"></span>
+</a>
+<h5 class="headline"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_3RURJbgg1cp8DGPkXKqXXaK9mERSzmqVoHL2yNFLMEhnC8ttqCuCu4WZHUh5nXoSYlONKgnkvMJYhk3dy8E9FskQRI_46WJqLN_D7EVfkKRT33pglkaMWVkEBhY-lMcOK9Wd68RvKn9srF9b3y7hWq1nLjf_ISkK997f5q1g7lkrC55-fsQsggPcZumYlALSYKv1b6Ggh7CAKlMOk1m1kKlXURz7gjdFhV_xCL1ZadNhC0-Q0zPh0Z6lZG4rIaDHqmQp0VNSnK7fcnt1vXDPjOBqdNXNORceTbaFw0FnkLNPmJt2E_LXiycCRR6NDiXKtHpvzIV1n8wt0xhUkQQiwdBqdNXNORceTbaFw0FnkLNM9IsMxAz6b5WWlJP9OHGRJd0zT_4wxhSEF1yq2pGI7a1_6q1aLQwwnxaEAbFXE7vdLemCxVo8ZvCDJiV4QCHSPwdYvcy25rPOTJ0jk1JPDHdbvIoKih5m-o5g2yMakWg4EpNpsiEj2YJiKiXfftOeQx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUws7lY_FnMVohb-c1tOt7r_MP-rjNtcD3C8rkzuWZjhdPkuy8jiP3Q0WqxG-uZ4V9GzVwsCsWq-EOS7P5jW2HFZIEBnIPS_h_RgPjoQXtyisRH9muXlq7E85YDBPc-hV5mJ1n8qHPl-3XEIiIL3GRjCoEWjJHoN-akiJpLpl1oeOkrVas7ruZOW-chYKqRjrFl6sNmUZWV1-OSFl0unuD7UC7DbCgQcV2m2xAhNL1YborZe9aLZ6PwRBUyi_O0pwvV7GJj5C7_mUW2dvW9vDQFS1cS4T3GkpdhFaIRG597kA" target="_blank">Business Forensic MBA</a></h5>
+<p class="description"><a href="https://www.linkedin.com/csp/crd?v=1&amp;cs=0_3RURJbgg1cp8DGPkXKqXXaK9mERSzmqVoHL2yNFLMEhnC8ttqCuCu4WZHUh5nXoSYlONKgnkvMJYhk3dy8E9FskQRI_46WJqLN_D7EVfkKRT33pglkaMWVkEBhY-lMcOK9Wd68RvKn9srF9b3y7hWq1nLjf_ISkK997f5q1g7lkrC55-fsQsggPcZumYlALSYKv1b6Ggh7CAKlMOk1m1kKlXURz7gjdFhV_xCL1ZadNhC0-Q0zPh0Z6lZG4rIaDHqmQp0VNSnK7fcnt1vXDPjOBqdNXNORceTbaFw0FnkLNPmJt2E_LXiycCRR6NDiXKtHpvzIV1n8wt0xhUkQQiwdBqdNXNORceTbaFw0FnkLNM9IsMxAz6b5WWlJP9OHGRJd0zT_4wxhSEF1yq2pGI7a1_6q1aLQwwnxaEAbFXE7vdLemCxVo8ZvCDJiV4QCHSPwdYvcy25rPOTJ0jk1JPDHdbvIoKih5m-o5g2yMakWg4EpNpsiEj2YJiKiXfftOeQx53KR6oXpav7SF8g3hBpzF6bVRaTU6nLuLZ7OSydiOcPK_JHITcNrBN_EIjI8zCfpS1Y4CJFqQqrTcAwwbuysYUK2DVqbAsPeyYrjQ46nUws7lY_FnMVohb-c1tOt7r_MP-rjNtcD3C8rkzuWZjhdPkuy8jiP3Q0WqxG-uZ4V9GzVwsCsWq-EOS7P5jW2HFZIEBnIPS_h_RgPjoQXtyisRH9muXlq7E85YDBPc-hV5mJ1n8qHPl-3XEIiIL3GRjCoEWjJHoN-akiJpLpl1oeOkrVas7ruZOW-chYKqRjrFl6sNmUZWV1-OSFl0unuD7UC7DbCgQcV2m2xAhNL1YborZe9aLZ6PwRBUyi_O0pwvV7GJj5C7_mUW2dvW9vDQFS1cS4T3GkpdhFaIRG597kA" target="_blank">Protect Against Fraud. 100% Online, Forensics-Focused MBA. Learn More Now!</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body></html>
+<!-- Show the debug messages.  These are only populated for trusted requests with parameter d > 0 -->
